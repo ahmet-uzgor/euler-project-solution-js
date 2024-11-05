@@ -11,7 +11,7 @@ function findSumofGivenMultiples(target, multiples) {
     const firstMultiplesSum = (nFirst * (nFirst + 1) * multiples[0])/2
     const nSecond = Math.floor(target/multiples[1])
     const secondMultiplesSum = (nSecond * (nSecond + 1) * multiples[1])/2
-    const nIntersection = nFirst*nSecond/target; //Math.floor(target/(multiples[0]*multiples[1]))
+    const nIntersection = Math.floor(nFirst*nSecond/target); //Math.floor(target/(multiples[0]*multiples[1]))
     const intersectionSum = (nIntersection * (nIntersection + 1) * multiples[0] * multiples[1])/2
     
     return firstMultiplesSum + secondMultiplesSum - intersectionSum
